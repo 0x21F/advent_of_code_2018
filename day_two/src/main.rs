@@ -31,6 +31,7 @@ fn main() {
                 .enumerate()
                 .filter(|(_, (x, y))| x != y)
                 .map(|(x, (_, _))| x )
+                .take(2)
                 .collect();
             if actual.len() == 1 {
                 x.remove(actual[0]);
